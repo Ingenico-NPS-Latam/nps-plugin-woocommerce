@@ -34,7 +34,7 @@ Description: NPS is a platform devoted to on-line payment processing, offering c
 Author: Ingenico NPS
 Version: 1.0
 Author URI: https://github.com/Ingenico-NPS-Latam
-WC tested up to: 3.5.2
+WC tested up to: 3.7.0
 */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -8,7 +8,7 @@ Puede integrar NPS Ingenico Latam en WooCommerce fácilmente, configurando los m
 
 ## Disponibilidad
 
-Soportado y probado en la versión 3.5.3 de WooCommerce.
+Soportado y probado en la versión 3.7.0 de WooCommerce.
 
 ## Métodos de integración
 
@@ -158,7 +158,7 @@ Para poder completar la siguiente configuración, es necesario tener previamente
 
   * Modificar la selección de cuotas seleccionando "Card" (marca de la tarjeta), "Installments" (cantidad de cuotas), "Status" (para habilitar o no esa selección de cuotas), "Country" (país de la transacción) y "Currency" (moneda de la transacción). También debe incluir el interés ("Rate") que desee agregarle a la transacción por el uso de cada selección de cuotas.
 
-  **Notas**:
+##Notas:
   
   Incluso cuando no se selecciona el checkbox "Installments" deberá configurar la selección de cuotas para 1 cuota para cada marca de tarjeta que desea habilitar en el Checkout.
 
