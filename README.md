@@ -158,7 +158,7 @@ To make the following configuration it is necessary to have Wordpress and WooCom
 
   * Modify installment just selecting Card, Installments, Status, Country and Currency drop-down selection. Also by entering any number between 0-999 in Rate input text.
 
-##Notes:
+## Notes:
   
   Even when Installments checkbox it's not enabled, you must setup the Cards in 1 installment, for being able to show it to the customer in the Checkout page.
 
@@ -169,3 +169,9 @@ To make the following configuration it is necessary to have Wordpress and WooCom
   * Country column in the Installments Details table
 
   * The customer Billing Details Country selection.
+  
+### Language:
+
+* Consider drop-down menu messages in NPS-installments.js and class-wc-gateway-nps.php files
+
+* Consider the value of 'psp_FrmLanguage' in class-wc-gateway-nps.php file
