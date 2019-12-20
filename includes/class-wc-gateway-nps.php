@@ -840,26 +840,79 @@ class WC_Gateway_Nps extends WC_Payment_Gateway_CC {
     switch(strtoupper($brand)) {
       case 1: return 'American Express';
       case 2: return 'Diners';
+      case 4: return 'JCB';
       case 5: return 'Mastercard';
       case 8: return 'Cabal';
       case 9: return 'Naranja';
       case 10: return 'Kadicard';
       case 14: return 'Visa';
+      case 15: return 'Favacard';
+      case 17: return 'Lider';
+      case 20: return 'Credimas';
       case 21: return 'Nevada';
+      case 29: return 'Visa Naranja';
+      case 33: return 'Patagonia 365';
+      case 34: return 'Sol';
+      case 35: return 'CMR Falabella';
+      case 38: return 'Nativa MC';
       case 42: return 'Tarjeta Shopping';
       case 43: return 'Italcred';
+      case 45: return 'Club La Nacion';
+      case 46: return 'Club Personal';
+      case 47: return 'Club Arnet';
       case 48: return 'Mas(cencosud)';
+      case 49: return 'Naranja MO';
       case 50: return 'Pyme Nacion';
-      case 38: return 'Nativa';
-      case 65: return 'Argencard';
-      case 72: return 'Consumax';
-      case 15: return 'Favacard';
-      case 101: return 'Discover';
-      case 17: return 'Lider';
-      case 95: return 'Coopeplus';
-      case 20: return 'Credimas';
+      case 51: return 'Clarin 365';
+      case 52: return 'Club Speedy';
+      case 53: return 'Argenta';
+      case 55: return 'Visa Debito';
+      case 57: return 'MC Bancor';
+      case 58: return 'Club La Voz';
       case 61: return 'Nexo';
-      case 101: return 'Nuevacard';
+      case 63: return 'NATIVA';
+      case 65: return 'Argencard';
+      case 66: return 'Maestro';
+      case 69: return 'Cetelem';
+      case 72: return 'Consumax';
+      case 75: return 'Mira';
+      case 91: return 'Credi Guia';
+      case 93: return 'Sucredito';
+      case 95: return 'Coopeplus';
+      case 101: return 'Discover';
+      case 102: return 'Elo';
+      case 103: return 'Magna';
+      case 104: return 'Aura';
+      case 105: return 'Hipercard';
+      case 106: return 'Credencial COL';
+      case 107: return 'RedCompra';
+      case 108: return 'SuperCard';
+      case 110: return 'BBPS';
+      case 112: return 'Ripley';
+      case 113: return 'OH!';
+      case 114: return 'Metro';
+      case 115: return 'UnionPay';
+      case 116: return 'Hiper';
+      case 117: return 'Carrefour';
+      case 118: return 'Grupar';
+      case 119: return 'Tuya';
+      case 120: return 'Club Dia';
+      case 121: return 'CTC Group';
+      case 122: return 'Qida';
+      case 123: return 'Codensa';
+      case 124: return 'Socios BBVA';
+      case 125: return 'UATP';
+      case 126: return 'Credz';
+      case 127: return 'WebPay';
+      case 128: return 'Comfama';
+      case 129: return 'Colsubsidio';
+      case 130: return 'Carnet';
+      case 131: return 'Carnet Debit';
+      case 132: return 'Ultra';
+      case 133: return 'Elebar';
+      case 134: return 'Carta Automatica';
+      case 135: return 'Don Credito';
+
       // default: throw new Exception("Error while formatting card_brand($brand).");
       default: return 'ERROR';
     };
@@ -2719,7 +2772,81 @@ class WC_Gateway_Nps extends WC_Payment_Gateway_CC {
   }
 
   protected function renderCardOptions($selected=NULL,$index=null) {
-    $choices = array('14'=>'visa','5'=>'mastercard','1'=>'american express');
+    $choices = array(
+      '1'=>'American Express',
+      '65'=>'Argencard',
+      '53'=>'Argenta',
+      '104'=>'Aura',
+      '110'=>'BBPS',
+      '8'=>'Cabal',
+      '130'=>'Carnet',
+      '131'=>'Carnet Debit',
+      '117'=>'Carrefour',
+      '134'=>'Carta Automatica',
+      '69'=>'Cetelem',
+      '51'=>'Clarin 365',
+      '47'=>'Club Arnet',
+      '120'=>'Club Dia',
+      '45'=>'Club La Nacion',
+      '58'=>'Club La Voz',
+      '46'=>'Club Personal',
+      '52'=>'Club Speedy',
+      '35'=>'CMR Falabella',
+      '123'=>'Codensa',
+      '129'=>'Colsubsidio',
+      '128'=>'Comfama',
+      '72'=>'Consumax',
+      '95'=>'Coopeplus',
+      '91'=>'Credi Guia',
+      '20'=>'Credimas',
+      '126'=>'Credz',
+      '121'=>'CTC Group',
+      '2'=>'Diners',
+      '101'=>'Discover',
+      '135'=>'Don Credito',
+      '133'=>'Elebar',
+      '102'=>'Elo',
+      '15'=>'Favacard',
+      '118'=>'Grupar',
+      '116'=>'Hiper',
+      '105'=>'Hipercard',
+      '43'=>'Italcred',
+      '4'=>'JCB',
+      '10'=>'Kadicard',
+      '17'=>'Lider',
+      '66'=>'Maestro',
+      '103'=>'Magna',
+      '48'=>'Mas(cencosud)',
+      '5'=>'Mastercard',
+      '57'=>'MC Bancor',
+      '114'=>'Metro',
+      '75'=>'Mira',
+      '9'=>'Naranja',
+      '49'=>'Naranja MO',
+      '63'=>'NATIVA',
+      '38'=>'Nativa MC',
+      '21'=>'Nevada',
+      '61'=>'Nexo',
+      '113'=>'OH!',
+      '33'=>'Patagonia 365',
+      '50'=>'Pyme Nacion',
+      '122'=>'Qida',
+      '107'=>'RedCompra',
+      '112'=>'Ripley',
+      '124'=>'Socios BBVA',
+      '34'=>'Sol',
+      '93'=>'Sucredito',
+      '108'=>'SuperCard',
+      '42'=>'Tarjeta Shopping',
+      '119'=>'Tuya',
+      '125'=>'UATP',
+      '132'=>'Ultra',
+      '115'=>'UnionPay',
+      '14'=>'Visa',
+      '55'=>'Visa Debito',
+      '29'=>'Visa Naranja',
+      '127'=>'WebPay',
+    );
     $html = '<select name="nps_card['.$index.']">';
     foreach($choices as $k => $v) {
       $html .= '<option value="'.$k.'" '.($k == $selected ? 'selected=selected' : '').'>'.$v.'</option>';
