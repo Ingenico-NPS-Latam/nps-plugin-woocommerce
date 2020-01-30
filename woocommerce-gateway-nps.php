@@ -25,14 +25,14 @@ SOFTWARE.
 
 /**
  * @package Ingenico_NPS
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: WooCommerce NPS Payment Gateway
 Plugin URI: https://github.com/Ingenico-NPS-Latam
 Description: NPS is a platform devoted to on-line payment processing, offering credit cards and alternative means of payment acceptance to e-commerce sites. Through a unique technical integration, a site could be connected to all means of payment available in Latin America.
 Author: Ingenico NPS
-Version: 1.0
+Version: 1.1
 Author URI: https://github.com/Ingenico-NPS-Latam
 WC tested up to: 3.7.0
 */
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Required minimums and constants
  */
-define( 'WC_NPS_VERSION', '0.1.0' );
+define( 'WC_NPS_VERSION', '0.1.1' );
 define( 'WC_NPS_MIN_PHP_VER', '5.6.0' );
 define( 'WC_NPS_MIN_WC_VER', '2.5.0' );
 define( 'WC_NPS_MAIN_FILE', __FILE__ );
