@@ -170,6 +170,27 @@ To make the following configuration it is necessary to have Wordpress and WooCom
 
   * The customer Billing Details Country selection.
   
+## Known Issues:
+
+  An error is known in the jquery.payments plugin used by woocomerce when using the **Advance Checkout integration method (Payment Flow)**, which it does not recognize the 19-digit length of some cards correctly. Being a third-party library, we leave     below a workarround to solve it:
+
+  >Locate the file **jquery.payments.js** inside the woocomerce plugin folder. It is usually found in:
+  >
+  >`wp-content\plugins\woocommerce\assets\js\jquery-payments\jquery.payments.js`
+  >
+  > Place in the code the line **upperLength = 16;**
+  >```length = (value.replace(/\D/g, '') + digit).length;
+  >   upperLength = 16;
+  >   if (card) {
+  >      upperLength = card.length[card.length.length - 1];
+  >   }
+  >```
+  >Replace `upperLength = 16;` by `upperLength = 19;`
+  >
+  >Minify and update the **jquery.payment.min.js** file.
+
+  **Note:** In case of updating woocommerce, it is necessary to perform these steps again.
+
 ### Language:
 
 * Consider drop-down menu messages in NPS-installments.js and class-wc-gateway-nps.php files

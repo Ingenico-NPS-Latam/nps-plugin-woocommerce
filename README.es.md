@@ -170,6 +170,27 @@ Para poder completar la siguiente configuración, es necesario tener previamente
 
   * El país que eligirá el comprador dentro del Billing Details.
   
+## Errores conocidos:
+
+  Se conoce un error en el plugin jquery.payments utilizado por woocomerce cuando se utiliza el **metodo de integracion (Payment Flow) Advance Checkout**, el cual no reconoce correctamente el largo de 19 digitos de algunas tarjetas. Al ser una libreria de terceros, dejamos debajo un camino alternativo para solucionarlo:
+ 
+  >Ubicar el archivo **jquery.payments.js** dentro de la carpeta del plugin de woocomerce. Normalmente se lo encuentra en:
+  >
+  >`wp-content\plugins\woocommerce\assets\js\jquery-payments\jquery.payments.js`
+  > 
+  > Ubicar en el codigo la linea **upperLength = 16;**
+  >```length = (value.replace(/\D/g, '') + digit).length;
+  >   upperLength = 16;
+  >   if (card) {
+  >      upperLength = card.length[card.length.length - 1];
+  >   }
+  >```
+  >Remplazar `upperLength = 16;` por `upperLength = 19;`
+  >
+  >Minificar y actualizar el archivo **jquery.payment.min.js**.
+
+ **Nota:** En caso de actualizar woocommerce, es necesario volver a realizar estos pasos.
+
 ### Lenguaje:
 
 * Considerar los mensajes del menu desplegable en los archivos NPS-installments.js y class-wc-gateway-nps.php

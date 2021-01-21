@@ -764,7 +764,7 @@ class WC_Gateway_Nps extends WC_Payment_Gateway_CC {
 			</p>',
       'card-number-field' => '<p class="form-row form-row-wide hide-if-saved-card">
 				<label for="' . esc_attr( $this->id ) . '-card-number">' . __( 'Card Number', 'woocommerce' ) . ' <span class="required">*</span></label>
-				<input id="' . esc_attr( $this->id ) . '-card-number" class="input-text wc-credit-card-form-card-number" type="text" maxlength="20" autocomplete="off" placeholder="•••• •••• •••• ••••"  '.$attr_name_card_number.' data-nps="card[number]" />
+				<input id="' . esc_attr( $this->id ) . '-card-number" class="input-text wc-credit-card-form-card-number" type="text" maxlength="25" autocomplete="off" placeholder="•••• •••• •••• ••••"  '.$attr_name_card_number.' data-nps="card[number]" />
 			</p>',
       'card-expiry-field' => '<p class="form-row form-row-first hide-if-saved-card">
 				<label for="' . esc_attr( $this->id ) . '-card-expiry">' . __( 'Card Expiry (MM/YY)', 'woocommerce' ) . ' <span class="required">*</span></label>
@@ -777,7 +777,7 @@ class WC_Gateway_Nps extends WC_Payment_Gateway_CC {
       $default_fields = array_slice($default_fields, 0, 1, true) +
         array("card-holder-name-field" => '<p class="form-row form-row-wide hide-if-saved-card">
 				<label for="' . esc_attr( $this->id ) . '-card-holder-name">' . __( 'Card Holder Name', 'woocommerce' ) . ' <span class="required">*</span></label>
-				<input id="' . esc_attr( $this->id ) . '-card-holder-name" class="input-text wc-credit-card-form-card-holder-name" type="text" maxlength="20" autocomplete="off" placeholder="Name On Card"  '.$attr_name_card_holder_name.' data-nps="card[holder_name]" />
+				<input id="' . esc_attr( $this->id ) . '-card-holder-name" class="input-text wc-credit-card-form-card-holder-name" type="text" maxlength="25" autocomplete="off" placeholder="Name On Card"  '.$attr_name_card_holder_name.' data-nps="card[holder_name]" />
 			</p>') +
         array_slice($default_fields, 1, count($default_fields) - 1, true) ;
 
