@@ -99,7 +99,7 @@ if ( ! class_exists( 'WC_Nps' ) ) :
 		 *
 		 * @return void
 		 */
-		private function __wakeup() {}
+		public function __wakeup() {}
 
 		/**
 		 * Flag to indicate whether or not we need to load code for / support subscriptions.

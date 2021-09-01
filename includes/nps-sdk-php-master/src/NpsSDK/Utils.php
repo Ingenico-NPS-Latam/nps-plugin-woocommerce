@@ -74,7 +74,7 @@ class Utils{
       return $concated_data;
     }
 
-    public static function validate_size($value, $k="", $nodo="", $sanitizeStruc){
+    public static function validate_size($value, $k, $nodo, $sanitizeStruc){
         if ($nodo != False){
             $key_name = $nodo . "." . $k . ".max_length";
         }else{
